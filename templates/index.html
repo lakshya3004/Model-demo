@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Prediction</title>
+</head>
+<body>
+    <h2>Enter Patient Data</h2>
+    <form action="/predict" method="post">
+        <label for="feature1">Pregnancies:</label>
+        <input type="number" name="feature1" required><br><br>
+
+        <label for="feature2">Glucose:</label>
+        <input type="number" name="feature2" required><br><br>
+
+        <label for="feature3">Blood Pressure:</label>
+        <input type="number" name="feature3" required><br><br>
+
+        <label for="feature4">Skin Thickness:</label>
+        <input type="number" name="feature4" required><br><br>
+
+        <label for="feature5">Insulin:</label>
+        <input type="number" name="feature5" required><br><br>
+
+        <label for="feature6">BMI:</label>
+        <input type="number" step="any" name="feature6" required><br><br>
+
+        <label for="feature7">Diabetes Pedigree Function:</label>
+        <input type="number" step="any" name="feature7" required><br><br>
+
+        <label for="feature8">Age:</label>
+        <input type="number" name="feature8" required><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
